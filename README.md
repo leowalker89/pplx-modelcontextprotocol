@@ -14,7 +14,7 @@ An MCP server that provides web search capabilities using Perplexity's API.
 
     ```bash
     git clone https://github.com/jaacob/perplexity-mcp
-    cd perplexity-server
+    cd perplexity-mcp
     ```
 
 2. Install dependencies:
