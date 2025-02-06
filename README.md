@@ -13,7 +13,7 @@ An MCP server that provides web search capabilities using Perplexity's API.
 1. Clone this repository:
 
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/jaacob/perplexity-mcp
 cd perplexity-server
 ```
 
