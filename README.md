@@ -44,7 +44,8 @@ npm run build
         "/absolute/path/to/perplexity-server/build/index.js"
       ],
       "env": {
-        "PERPLEXITY_API_KEY": "your-api-key-here"
+        "PERPLEXITY_API_KEY": "your-api-key-here",
+        "PERPLEXITY_MODEL": "sonar"
       }
     }
   }
@@ -53,23 +54,28 @@ npm run build
 
 Replace `/absolute/path/to` with the actual path to where you cloned the repository.
 
+### Available Models
+
+You can specify which model to use by setting the `PERPLEXITY_MODEL` environment variable. Available options:
+
+- `sonar-reasoning-pro` - Most capable model with enhanced reasoning
+- `sonar-reasoning` - Enhanced reasoning capabilities
+- `sonar-pro` - Faster response times
+- `sonar` - Default model (used if no model is specified)
+
+For up-to-date model pricing and availability, visit: <https://docs.perplexity.ai/guides/pricing>
+
 ## Usage
 
-After configuring the server and restarting Claude, you can use the search tool:
+After configuring the server and restarting Claude, you can simply ask Claude to search for information. For example:
 
-```typescript
-<use_mcp_tool>
-<server_name>perplexity-server</server_name>
-<tool_name>search</tool_name>
-<arguments>
-{
-  "query": "your search query here"
-}
-</arguments>
-</use_mcp_tool>
-```
+- "What's the latest news about SpaceX?"
+- "Search for the best restaurants in Chicago"
+- "Find information about the history of jazz music"
 
-The server will return search results from Perplexity's Sonar model.
+Claude will automatically use the Perplexity search tool to find and return relevant information.
+
+If for whatever reason it decides not to, you can force the issue by prepending your prompt with "Search the web".
 
 ## Development
 

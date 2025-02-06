@@ -14,6 +14,13 @@ if (!API_KEY) {
   throw new Error('PERPLEXITY_API_KEY environment variable is required');
 }
 
+const VALID_MODELS = ['sonar-reasoning-pro', 'sonar-reasoning', 'sonar-pro', 'sonar'];
+const MODEL = process.env.PERPLEXITY_MODEL || 'sonar';
+
+if (!VALID_MODELS.includes(MODEL)) {
+  throw new Error(`Invalid model '${MODEL}'. Valid models are: ${VALID_MODELS.join(', ')}`);
+}
+
 interface SearchResponse {
   choices: [{
     message: {
@@ -100,7 +107,7 @@ class PerplexityServer {
 
       try {
         const response = await this.axiosInstance.post<SearchResponse>('/chat/completions', {
-          model: 'sonar',
+          model: MODEL,
           messages: [
             {
               role: 'system',
@@ -149,7 +156,7 @@ class PerplexityServer {
   async run() {
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
-    console.error('Perplexity Search MCP server running on stdio');
+    console.error(`Perplexity Search MCP server running on stdio (using model: ${MODEL})`);
   }
 }
 
