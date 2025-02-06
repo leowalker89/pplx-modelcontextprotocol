@@ -1,5 +1,7 @@
 # Perplexity MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@jaacob/perplexity-mcp)](https://smithery.ai/server/@jaacob/perplexity-mcp)
+
 An MCP server that provides web search capabilities using Perplexity's API.
 
 ## Prerequisites
@@ -10,6 +12,15 @@ An MCP server that provides web search capabilities using Perplexity's API.
 
 ## Installation
 
+### Installing via Smithery
+
+To install Perplexity Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@jaacob/perplexity-mcp):
+
+```bash
+npx -y @smithery/cli install @jaacob/perplexity-mcp --client claude
+```
+
+### Manual Installation
 1. Clone this repository:
 
 ```bash
