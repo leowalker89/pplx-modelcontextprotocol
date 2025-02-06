@@ -12,22 +12,22 @@ An MCP server that provides web search capabilities using Perplexity's API.
 
 1. Clone this repository:
 
-```bash
-git clone https://github.com/jaacob/perplexity-mcp
-cd perplexity-server
-```
+    ```bash
+    git clone https://github.com/jaacob/perplexity-mcp
+    cd perplexity-server
+    ```
 
 2. Install dependencies:
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 3. Build the server:
 
-```bash
-npm run build
-```
+    ```bash
+    npm run build
+    ```
 
 ## Configuration
 
