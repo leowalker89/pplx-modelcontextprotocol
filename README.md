@@ -41,7 +41,7 @@ An MCP server that provides web search capabilities using Perplexity's API.
     "perplexity-server": {
       "command": "node",
       "args": [
-        "/absolute/path/to/perplexity-server/build/index.js"
+        "/absolute/path/to/perplexity-mcp/build/index.js"
       ],
       "env": {
         "PERPLEXITY_API_KEY": "your-api-key-here",
