@@ -4,6 +4,8 @@
 
 An MCP server that provides web search capabilities using Perplexity's API.
 
+<a href="https://glama.ai/mcp/servers/97nsl3drhq"><img width="380" height="200" src="https://glama.ai/mcp/servers/97nsl3drhq/badge" alt="Perplexity Server MCP server" /></a>
+
 ## Prerequisites
 
 - Node.js (v14 or higher)
