@@ -204,7 +204,11 @@ const server = new Server(
   },
   {
     capabilities: {
-      tools: {},
+      tools: {
+        [PERPLEXITY_ASK_TOOL.name]: PERPLEXITY_ASK_TOOL,
+        [PERPLEXITY_RESEARCH_TOOL.name]: PERPLEXITY_RESEARCH_TOOL,
+        [PERPLEXITY_REASON_TOOL.name]: PERPLEXITY_REASON_TOOL,
+      },
     },
   }
 );
